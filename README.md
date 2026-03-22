@@ -39,3 +39,16 @@ ALTER TABLE public.sales
     ALTER COLUMN customer_rating TYPE NUMERIC USING customer_rating::NUMERIC,
     ALTER COLUMN discount_percent TYPE NUMERIC USING discount_percent::NUMERIC,
     ALTER COLUMN revenue TYPE NUMERIC USING revenue::NUMERIC;
+```
+## Business Questions
+
+1. What is the total revenue by region?
+2. Which product category generates the highest revenue?
+3. What is the average delivery time by region?
+4. What percentage of orders are returned?
+5. Which payment method is used most frequently?
+6. How does revenue change over time (monthly trend)?
+7. How do discounts affect revenue?
+8. Who are the top 10 customers by revenue?
+9. What is the month-over-month revenue growth rate?
+10. What are the top 3 product categories in each region by revenue?
