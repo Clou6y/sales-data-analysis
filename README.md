@@ -60,6 +60,9 @@ ALTER TABLE public.sales
 9. What is the month-over-month revenue growth rate?
 10. What are the top 3 product categories in each region by revenue?
 
+## Results and Insights
+
+
 ## Analysis Approach
 
 The analysis focuses on key business performance indicators, including:
