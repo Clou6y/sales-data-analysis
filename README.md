@@ -1,5 +1,10 @@
 # Sales-data-analysis
 Data analysis project using PostgreSQL to clean, transform, and analyze sales data to generate business insights.
+
+## Project Objective
+
+The objective of this project is to analyze sales performance across regions, product categories, and customer segments to identify revenue trends, operational efficiency, and customer behavior patterns.
+
 ## Tools
 - PostgreSQL
 - SQL
@@ -8,7 +13,7 @@ Data analysis project using PostgreSQL to clean, transform, and analyze sales da
 Dataset: sales
 
 Number of rows: 100,001  
-Number of columns: 12
+Number of columns: 13
 | Column           | Data Type | Description                 |
 | ---------------- | --------- | --------------------------- |
 | order_id         | INT       | Unique order identifier     |
@@ -24,6 +29,8 @@ Number of columns: 12
 | customer_rating  | NUMERIC   | Customer satisfaction score |
 | discount_percent | NUMERIC   | Discount applied            |
 | revenue          | NUMERIC   | Total revenue               |
+
+## Data Cleaning
 
 - Imported CSV into PostgreSQL
 - All columns initially loaded as TEXT
@@ -52,3 +59,22 @@ ALTER TABLE public.sales
 8. Who are the top 10 customers by revenue?
 9. What is the month-over-month revenue growth rate?
 10. What are the top 3 product categories in each region by revenue?
+
+## Analysis Approach
+
+The analysis focuses on key business performance indicators, including:
+
+- Revenue distribution across regions and product categories
+- Customer purchasing behavior
+- Delivery performance
+- Return rates
+- Sales trends over time
+- Impact of discounts on revenue
+
+## Repository Structure
+
+sales-data-analysis
+
+README.md 
+queries.sql
+LICENSE
