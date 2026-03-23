@@ -1,3 +1,9 @@
+/* =====================================================
+   SALES DATA ANALYSIS PROJECT
+   Author: Emil Shafiyev
+   Database: PostgreSQL
+   ===================================================== */
+
 -- 1. Total revenue by region
 -- Business Question:
 -- What is the total revenue by region?
@@ -6,7 +12,7 @@ SELECT
   SUM(revenue) AS total_revenue
 FROM sales
 GROUP BY region
-ORDER BY total_revenue;
+ORDER BY total_revenue DESC;
 -- North America generates the highest total revenue among all regions.
 
 -- 2. Total revenue by product category
@@ -51,7 +57,7 @@ SELECT
 	COUNT(*) AS number_of_orders
 FROM sales
 GROUP BY payment_method
-ORDER BY number_of_orders;
+ORDER BY number_of_orders DESC;
 -- Cash is the most commonly used payment method.
 
 -- 6. Monthly Revenue Trend
@@ -74,7 +80,7 @@ SELECT
 FROM sales
 GROUP BY discount_percent
 ORDER BY discount_percent;
---Higher discounts are associated with decreased average revenue per order.
+-- Higher discounts are associated with decreased average revenue per order.
 
 -- 8. Top 10 Customers by Revenue
 -- Business Question:
@@ -92,14 +98,31 @@ LIMIT 10;
 -- Business Question:
 -- How is revenue growth changing month-over-month?
 SELECT 
-	DATE_TRUNC('month', order_date) AS month,
-	SUM(revenue) AS revenue,
-	LAG(SUM(revenue)) OVER(
-		ORDER BY DATE_TRUNC('month', order_date)
-		) AS prev_month_rev
+    DATE_TRUNC('month', order_date) AS month,
+    SUM(revenue) AS revenue,
+
+    LAG(SUM(revenue)) OVER (
+        ORDER BY DATE_TRUNC('month', order_date)
+    ) AS prev_month_rev,
+
+    ROUND(
+        (
+            SUM(revenue)
+            - LAG(SUM(revenue)) OVER (
+                ORDER BY DATE_TRUNC('month', order_date)
+            )
+        )
+        /
+        LAG(SUM(revenue)) OVER (
+            ORDER BY DATE_TRUNC('month', order_date)
+        ) * 100,
+        2
+    ) AS growth_percent
+
 FROM sales
 GROUP BY month
 ORDER BY month;
+-- Revenue grows significantly in November.
 
 -- 10. Top 3 Products per Region
 -- Business Question:
