@@ -1,0 +1,19 @@
+region,product_category,total_revenue,rank
+Africa,Sports,1741033.40,1
+Africa,Automotive,1738649.80,2
+Africa,Toys,1738530.03,3
+Asia,Electronics,1834722.73,1
+Asia,Automotive,1812036.02,2
+Asia,Sports,1783981.07,3
+Europe,Automotive,1758535.47,1
+Europe,Toys,1754848.82,2
+Europe,Electronics,1753402.29,3
+North America,Fashion,1811207.47,1
+North America,Automotive,1769313.39,2
+North America,Beauty,1756494.31,3
+Oceania,Fashion,1849317.33,1
+Oceania,Toys,1804317.11,2
+Oceania,Home,1798355.09,3
+South America,Toys,1807370.08,1
+South America,Sports,1783024.25,2
+South America,Automotive,1758093.29,3
