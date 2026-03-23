@@ -13,7 +13,7 @@ SELECT
 FROM sales
 GROUP BY region
 ORDER BY total_revenue DESC;
--- North America generates the highest total revenue among all regions.
+-- Oceania generates the highest total revenue among all regions.
 
 -- 2. Total revenue by product category
 -- Business Question:
@@ -58,7 +58,7 @@ SELECT
 FROM sales
 GROUP BY payment_method
 ORDER BY number_of_orders DESC;
--- Cash is the most commonly used payment method.
+-- Credit card is the most commonly used payment method.
 
 -- 6. Monthly Revenue Trend
 -- Business Question:
