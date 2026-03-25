@@ -45,7 +45,7 @@ SELECT
         100.0 * SUM(CASE WHEN is_returned = TRUE THEN 1 ELSE 0 END)
         / COUNT(*),
         2
-    ) AS return_rate_percent
+    ) AS return_rate
 FROM sales;
 -- The return rate is 6.06% of total orders.
 
