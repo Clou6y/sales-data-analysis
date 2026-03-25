@@ -1,6 +1,20 @@
 # Sales-data-analysis
 Data analysis project using PostgreSQL to clean, transform, and analyze sales data to generate business insights.
 
+## Dataset
+
+Name: Synthetic E-Commerce Sales Dataset 2025
+
+Source: Kaggle
+
+Author: Emirhan Akkuş
+
+Link:
+[https://www.kaggle.com/USERNAME/DATASET-NAME](https://www.kaggle.com/datasets/emirhanakku/synthetic-e-commerce-sales-dataset-2025)
+
+Note:
+The original dataset is large, so a sample version is included in this repository.
+
 ## Project Objective
 
 The objective of this project is to analyze sales performance across regions, product categories, and customer segments to identify revenue trends, operational efficiency, and customer behavior patterns.
