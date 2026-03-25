@@ -69,7 +69,7 @@ SELECT
 FROM sales
 GROUP BY month
 ORDER BY month;
--- Revenue peaks during November
+-- Revenue peaks during November.
 
 -- 7. Impact of Discount on Revenue
 -- Business Question:
