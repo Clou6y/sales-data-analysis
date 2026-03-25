@@ -141,3 +141,16 @@ FROM (
     GROUP BY region, product_category
 ) AS w
 WHERE rank <= 3;
+
+-- 11. Cumulative revenue
+-- Business Question:
+-- How does cumulative revenue grow over time?
+SELECT
+    order_date,
+    SUM(revenue) AS daily_sales,
+    SUM(SUM(revenue)) OVER (
+        ORDER BY order_date
+    ) AS running_total
+FROM sales
+GROUP BY order_date
+ORDER BY order_date
