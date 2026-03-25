@@ -375,8 +375,26 @@ The analysis focuses on key business performance indicators, including:
 
 ## Repository Structure
 
-sales-data-analysis
+## Project Structure
 
-README.md 
-queries.sql
-LICENSE
+```text
+sales-data-analysis/
+├── data/
+│   ├── results/
+│   │   ├── avg_delivery_time_by_region.csv
+│   │   ├── cumulative_revenue.csv
+│   │   ├── discount_on_rev_impact.csv
+│   │   ├── most_freq_pay_md.csv
+│   │   ├── return_rate_percentage.csv
+│   │   ├── revenue_change_m_to_m.csv
+│   │   ├── revenue_growth_rate.csv
+│   │   ├── top_10_customer_by_rev.csv
+│   │   ├── top_3_prod_per_region.csv
+│   │   ├── total_revenue_by_product_category.csv
+│   │   └── total_revenue_by_region.csv
+│   └── sample_dataset/
+│       └── sample_sales.csv
+├── sql/
+│   └── queries.sql
+├── LICENSE
+└── README.md
