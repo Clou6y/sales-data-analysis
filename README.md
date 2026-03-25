@@ -320,6 +320,33 @@ Result:
 | South America | Sports | 1,783,024.25 | 2 |
 | South America | Automotive | 1,758,093.29 | 3 |
 
+### Question 11: How does cumulative revenue grow over time?
+```sql
+SELECT
+    order_date,
+    SUM(revenue) AS daily_sales,
+    SUM(SUM(revenue)) OVER (
+        ORDER BY order_date
+    ) AS running_total
+FROM sales
+GROUP BY order_date
+ORDER BY order_date
+```
+Result:
+| order_date | daily_sales | running_total |
+|------------|--------------|---------------|
+| 2023-01-01 | 53,967.21 | 53,967.21 |
+| 2023-01-02 | 56,759.49 | 110,726.70 |
+| 2023-01-03 | 63,499.54 | 174,226.24 |
+| 2023-01-04 | 83,437.61 | 257,663.85 |
+| 2023-01-05 | 62,431.85 | 320,095.70 |
+| ... |
+| 2025-09-21 | 75,080.44 | 66,279,135.28 |
+| 2025-09-22 | 62,914.24 | 66,342,049.52 |
+| 2025-09-23 | 55,138.06 | 66,397,187.58 |
+| 2025-09-24 | 57,383.37 | 66,454,570.95 |
+| 2025-09-25 | 61,022.64 | 66,515,593.59 |
+| 2025-09-26 | 58,226.43 | 66,573,820.02 |
 
 ## Analysis Approach
 
