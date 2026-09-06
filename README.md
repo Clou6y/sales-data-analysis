@@ -1,4 +1,4 @@
-# Sales-Business/Data-Analysis
+# Sales-Business-Analysis
 Data analysis project using PostgreSQL to clean, transform, and analyze sales data to generate business insights.
 
 ## Dataset
